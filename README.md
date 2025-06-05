@@ -31,7 +31,7 @@ Tech Stack
 Getting Started
  1. Clone the repository
  Copy
- git clone https://github.com/your-username/grocery-billing-system.git
+ git clone https://github.com/gayatrichaudhari-hue/grocery-billing-system.git
  cd grocery-billing-system
 
 2. Open the app

@@ -1,0 +1,577 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.header {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #2d3748;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bill-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#billNumber {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Main Content */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+}
+
+.card h2 {
+    color: #2d3748;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+}
+
+/* Form Styles */
+.item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+  
+#itemSize {
+    padding:12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight:100;
+    color:#717375;
+    transition : border-color 0.2s;
+    width: 100% ;
+}
+
+#itemSize:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(55, 143, 113, 0.1);
+}
+#itemSize option {
+  font-weight: 200;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #444444;
+}
+
+/*hover sathi*/
+#itemSize option:hover {
+  background-color: #f0fdf4; 
+  color: #d5fae0;
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/*price ani quantity row madhe disnyasathi*/
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/*subheadings*/
+label {
+    font-weight: 700;
+    color: #374151;
+    font-size: 1rem;
+}
+
+.input-container {
+    position: relative;
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    width: 100%;
+}
+/*green inputbox border sathi*/
+input:focus {
+    outline: none;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Suggestions Dropdown */
+.suggestions-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestion-item {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #f3f4f6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.suggestion-item:hover {
+    background-color: #f0fdf4;
+}
+
+.suggestion-item:last-child {
+    border-bottom: none;
+}
+
+.suggestion-name {
+    font-weight: 500;
+    color: #374151;
+}
+
+.suggestion-price {
+    color: #10b981;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/*add item button*/
+.btn-primary {
+    background: #10b981;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #059669;
+}
+
+.btn-secondary {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+}
+/*download button*/
+.btn-success {
+    background: #10b981;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #059669;
+}
+/*clear button*/
+.btn-danger {
+    background: #ef4444;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.btn-danger:hover {
+    background: #dc2626;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.stat-card {
+    background: white;
+    border: 2px solid #f3f4f6;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #10b981;
+}
+
+.stat-label {
+    color: #6b7280;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* current Bill Items */
+.bill-items {
+    min-height: 300px;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #9ca3af;
+}
+
+.empty-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.empty-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.bill-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+}
+
+.item-price {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+}
+
+.item-total {
+    font-weight: 600;
+    color: #374151;
+    min-width: 80px;
+    text-align: right;
+}
+
+.remove-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.remove-btn:hover {
+    background: #dc2626;
+}
+
+/* Bill Summary */
+.bill-summary {
+    border-top: 2px solid #e5e7eb;
+    padding-top: 16px;
+    margin-top: 16px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    color: #6b7280;
+}
+
+.summary-row.total {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 8px;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.action-buttons .btn {
+    flex: 1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 5% auto;
+    padding: 0;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #374151;
+}
+
+.close {
+    color: #9ca3af;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #374151;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.modal-footer .btn {
+    flex: 1;
+}
+
+/* Bill Preview Styles */
+.bill-preview {
+    text-align: center;
+}
+
+.store-header {
+    margin-bottom: 20px;
+}
+
+.store-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.store-info {
+    color: #6b7280;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.bill-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 16px;
+    background: #f9fafb;
+    border-radius: 8px;
+}
+
+.bill-details span {
+    color: #6b7280;
+    font-size: 0.9rem;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.items-table th,
+.items-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.items-table th {
+    background: #f9fafb;
+    font-weight: 600;
+    color: #374151;
+}
+
+.items-table td:last-child,
+.items-table th:last-child {
+    text-align: right;
+}
+
+.bill-footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+    }
+    
+    .bill-details {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    
+    .modal-body, .modal-body * {
+        visibility: visible;
+    }
+    
+    .modal {
+        position: static;
+        background: none;
+    }
+    
+    .modal-content {
+        box-shadow: none;
+        margin: 0;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .modal-header,
+    .modal-footer {
+        display: none;
+    }
+}

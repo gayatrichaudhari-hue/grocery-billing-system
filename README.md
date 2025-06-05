@@ -4,44 +4,45 @@ A lightweight web-based billing system for grocery stores. This project allows u
 🛒 Grocery Billing System
 A simple and efficient billing system for grocery stores, built using HTML, CSS, and JavaScript — no frameworks required!
 
-✨ Features
-✅ Add grocery items manually
+Features
 
-✅ Auto-suggestions for product names
+ 1.Add grocery items manually
+ 
+ 2.Auto-suggestions for product names
+ 
+ 3.Auto-fill price based on product size
+ 
+ 4.Supports custom items and prices
+ 
+ 5.Calculates subtotal, tax, and total
+ 
+ 6.Generates a printable/downloadable bill
+ 
+ 7.Bill ID generation for tracking
+ 
+ 8.Fully responsive and offline-compatible
 
-✅ Auto-fill price based on product size
-
-✅ Supports custom items and prices
-
-✅ Calculates subtotal, tax, and total
-
-✅ Generates a printable/downloadable bill
-
-✅ Bill ID generation for tracking
-
-✅ Fully responsive and offline-compatible
-
-💻 Tech Stack
-HTML
-CSS
-JavaScript
+Tech Stack
+ HTML
+ CSS
+ JavaScript
 
 
- Getting Started
-1. Clone the repository
-Copy
-git clone https://github.com/your-username/grocery-billing-system.git
-cd grocery-billing-system
+Getting Started
+ 1. Clone the repository
+ Copy
+ git clone https://github.com/your-username/grocery-billing-system.git
+ cd grocery-billing-system
 
-3. Open the app
+2. Open the app
 Just open index.html in your browser — no setup required!
 
 📂 Project Structure
-grocery-billing-system/
-├── index.html        # Main HTML file
-├── styles.css        # All styling
-├── script.js         # Main application logic
-└── README.md         # Project documentation
+ grocery-billing-system/
+ ├── index.html        # Main HTML file
+ ├── styles.css        # All styling
+ ├── script.js         # Main application logic
+ └── README.md         # Project documentation
 
 🙌 Credits
 Created by Gayatri Subhash Chaudhari — inspired by real-world billing needs.
